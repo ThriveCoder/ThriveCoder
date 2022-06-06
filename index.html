@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+      integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/fontawesome.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <title>My phone</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.fa-power-off {
+    margin: 0 0 0 1rem;
+    color: red;
+    font-size: 2rem;
+    cursor: pointer;
+}
+#off {
+    color: red;
+    font-size: 2rem;
+}
+.phone-body {
+    border-radius: 2rem;
+    border-style: solid;
+    border-color: black;
+    width: 20rem;
+    height: 40rem;
+    margin: 0 0 0 40%;
+}
+ .fa-camera {
+    position: fixed;
+    display: block;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: 0 0 0 8.9rem;
+    font-size: 12px;
+    cursor: pointer;
+    background: none;
+    border-radius: 2rem;
+    border-color: grey;
+    border-style: solid;
+    border-width: 2px;
+    border-top: none; 
+    color: black;
+}
+#screen {
+    background-image: url(pigeon.jpg);
+    height: 39.2rem;
+    width: 19rem;
+    border-radius: 2rem;
+    border-style: solid;
+    border-color: grey;
+    margin: 1px 0 3px 5px;
+}
+/* .fa-rss, .fa-signal, .fa-battery-full {
+    position: fixed;
+} */
+/* .speaker {
+    background-color: grey;
+    border-radius: 2rem;
+    border-style: solid;
+    border-color: grey;
+    width: 2rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+} */
+/* .fa-battery-full {
+    /* display: flex; */
+    /* justify-content: space-between; 
+    
+    
+} */
+em {
+    font-size: 5px;
+    position: fixed;
+    margin: 3px 0 0 1rem;
+}
+.fa-rss {
+    position: fixed;
+    margin: 5px 0 0 11rem;
+    font-size: 12px;
+}
+.fa-signal {
+    position: fixed;
+    margin: 2px 0 0 12rem;
+}
+.fa-battery-full {
+    position: fixed;
+    margin: 2px 0 0 13.5rem;
+}
+#time {
+    position: fixed;
+    margin: 2px 0 0 15rem;
+}
+.fa-google {
+    color: white;
+    background-color: blue;
+    border-radius: 2rem;
+    width: 1.1rem;
+    height: 1.1rem;
+    border-style: solid;
+    border-color: blue;
+    font-size: 13px;
+    margin: 3rem 0 0 1rem;
+}
+input {
+    border-radius: 2rem;
+    width: 13rem;
+    height: 1.5rem;
+    color: black;
+    margin: 3rem 0 0 0;
+}
+.fa-microphone {
+    color: blue;
+    margin: 3rem 0 0 0;
+}
+.fa-facebook, .fa-twitter-square, .fa-github, .fa-instagram, .fa-telegram, .fa-google-drive, #google-app, .fa-video, .fa-youtube, .fa-envelope {
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+.fa-facebook {
+    color: blue;
+    margin: 1rem 0 0 1rem;
+}
+.fa-twitter-square {
+    color: white;
+    background-color: dodgerblue;
+    margin: 1rem 0 0 2rem;
+}
+.fa-github {
+    color: orange;
+    margin: 1rem 0 0 2.5rem;
+    height: 1rem;
+    width: 1rem;
+
+}
+.fa-telegram {
+    color: dodgerblue;
+    margin: 1rem 0 0 1rem;
+}
+.fa-instagram {
+    color: deeppink;
+    margin: 1rem 0 0 3rem;
+}
+.fa-google-drive {
+    color: blue;
+    margin: 1rem 0 0 2rem;
+}
+#google-app {
+    background: none;
+    color: blue;
+    margin: 1rem 0 0 2rem;
+    border: none;
+} 
+.fa-video {
+    color: blue;
+    margin: 1rem 0 0 3.5rem;
+}
+.fa-youtube {
+    color: red;
+    margin: 1rem 0 0 1rem;
+}
+.fa-envelope {
+    color: red;
+    margin: 1rem 0 0 1rem;
+}
+.fa-phone-square {
+    margin: 7.5rem 0 0 1rem;
+    color: rgb(74, 247, 74);
+    font-size: 2.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+.fa-envelope-open {
+    color: blue;
+    font-size: 2.5rem;
+    border-radius: 0.5rem;
+    margin: 7.5rem 0 0 2rem;
+    cursor: pointer;
+}
+.fa-camera-retro {
+    color: blue;
+    font-size: 2.5rem;
+    border-radius: 0.5rem;
+    margin: 7.5rem 0 0 2rem;
+    cursor: pointer;
+    border: none;
+}
+.fa-folder {
+    color: darkorange;
+    font-size: 2.5rem;
+    border-radius: 0.5rem;
+    margin: 7.5rem 0 0 2rem;
+    cursor: pointer;
+}
+.fa-cog {
+    color: blue;
+    font-size: 2.5rem;
+    border-radius: 0.5rem;
+    margin: 1rem 0 0 2rem;
+    cursor: pointer;
+}
+.fa-whatsapp-square {
+    color: green;
+    font-size: 3rem;
+    margin: 1rem 0 0 1rem;
+}
+.fa-tiktok {
+    background-color: black;
+    color: white;
+    margin: 0.5rem 0 0 1rem;
+}
+.fa-music {
+    color: blue;
+    font-size: 2.5rem;
+    border-radius: 0.5rem;
+    margin: 1rem 0 0 2rem;
+    cursor: pointer;
+}
+/* .fa-tty {
+    color: blue;
+    font: 2rem;
+    margin: 3rem 0 10rem 2rem;
+} */
+.fa-bars, .fa-arrow-left, .fa-circle {
+    margin: 0rem 0 0 0;
+    cursor: pointer;
+}
+.fa-bars {
+    margin: 0rem 0 0 2rem;
+}
+.fa-circle {
+    margin: 0rem 0 0 6rem;
+}
+.fa-arrow-left {
+    margin: 0rem 0 0 5rem;
+}
+.facebook, .twitter, .github, .instagram, .telegram, .duo, .youtube, .gmail, .tiktok {
+    margin: 0 0 0 1.3rem;
+    font-size: 10px;
+} 
+.drive, .google, .whatsapp, .phone {
+    margin: 0 0 0 0.4rem;
+}
+.music, .setting, .files, .camera {
+    margin: 0 0 0 2rem;
+}
+.message {
+    margin: 0 0 0 2.5rem;
+}
+#call-content {
+    position: absolute;  
+    display: block;
+    background-color: white;
+    color: black;
+    width: 18.62rem;
+    height: 38.7rem;
+    border-radius: 2rem;
+    margin: 0 0 0 0;
+}
+.fa-phone {
+    background-color: royalblue;
+    color: white;
+    font-size: 1.5rem;
+    border-radius: 2.5rem;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    margin: 1rem 0 0 8.5rem;
+}
+.recent-contacts {
+    background-color: whitesmoke;
+    width: 18.62rem;
+    height: 16rem;
+    display: flex;
+    justify-content: space-between;
+    /* flex-direction: row; */
+    flex-wrap: wrap;
+}
+.mum {
+    font-size: 1.2rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: dodgerblue;
+    color: white;
+    width: 3.5rem;
+    height: 3rem;
+    padding: 0.7rem 0 0 0.4rem;
+    cursor: pointer;
+}
+.dad {
+    font-size: 1.2rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: royalblue;
+    color: white;
+    width: 3.5rem;
+    height: 3rem;
+    padding: 0.7rem 0 0 0.7rem;
+    cursor: pointer;
+}
+.sister {
+    font-size: 1.2rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: orange;
+    color: white;
+    width: 3.5rem;
+    height: 3rem;
+    padding: 0.7rem 0 0 0.25rem;
+    cursor: pointer;
+}
+.brother {
+    font-size: 1.2rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: red;
+    color: white;
+    width: 4.4rem;
+    height: 3rem;
+    padding: 0.7rem 0 0 0.2rem;
+    cursor: pointer;
+    margin: 0 0.5rem 0 0;
+}
+.mum:hover, .dad:hover, .sister:hover, .brother:hover {
+    width: 4.4rem;
+    height: 4rem;
+    border-radius: 2vh;
+    border-style: hidden;
+}
+.add-remove {
+    display: flex;
+    justify-content: space-between;
+}
+#numberBoard {
+    width: 16rem;
+    height: 2rem;
+    border-radius: 1rem;
+    background: white;
+    border-style: solid;
+    border-color: black;
+    color: black;
+    margin: 1rem 0 1rem 1.2rem;
+    cursor: text;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+.fa-times {
+    margin: 1.45rem 0.8rem 1rem 0;
+    border: 3px solid black;
+    height: 1.3rem;
+}
+td > button {
+    margin: 0rem 0 0 2.7rem;
+    width: 2.4rem;
+    height: 2.5rem;
+    border-style: hidden;
+    background: none;
+}
+button:hover {
+    border-radius: 2rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: grey;
+}
+    </style>
+</head>
+<body>
+    <i class="fa fa-power-off" id="on" ondblclick='phoneOn()'></i>
+    <!--<i class="fa fa-power-off" id="off"></i> -->
+    <div class="phone-body">
+        <div id="screen" onclick="navigate()" ondblclick="removeNavigator()">
+            <div id="call-content" onclick="navigater()" ondblclick="removeNavigator()">
+                <input type="search" name="search" id="search">
+                <div class="recent-contacts">
+                    <pre class="mum">Mum</pre>
+                    <pre class="dad">Dad</pre>
+                    <pre class="sister">Sister</pre>
+                    <pre class="brother">Brother</pre>
+                </div>
+                
+                    <div class="dialcontent">
+                        <div class="add-remove">
+                            <pre id="numberBoard"></pre>
+                            <pre id="cancle" class="fa fa-times"></pre>
+                        </div>
+                        <div class="numbers">
+                            <table>
+                                <tr>
+                                    <td><button id="1">1</button></td>
+                                    <td><button id="2">2</button></td>
+                                    <td><button id="3">3</button></td>
+                                    
+                                </tr>
+                                <tr>
+                                    <td><button id="4">4</button></td>
+                                    <td><button id="5">5</button></td>
+                                    <td><button id="6">6</button></td>
+                                </tr>
+                                <tr>
+                                    <td><button id="7">7</button></td>
+                                    <td><button id="8">8</button></td>
+                                    <td><button id="9">9</button></td>
+                                </tr>
+                                <tr>
+                                    <td><button id="*">*</button></td>
+                                    <td><button id="0">0</button></td>
+                                    <td><button id="#">#</button></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <i class="fa fa-phone fa-border fa-2x"></i>
+                    </div>
+                
+            </div>
+            <button id="startbutton" class="fa fa-camera"></button>
+            <!-- <div class="contentarea">
+                <div class="camera">
+                    <video src="#" class="video">Video sttream not available</video>
+                </div>
+                <div><button id="startbutton" class="fa fa-camera"></button></div>
+                <canvas id="canvas"></canvas>
+                <div class="output">
+                    <img src="" alt="The screen capture will appear here in the box" id="photo">
+                </div>
+            </div> -->
+            
+            
+            <div class="when-on">
+                <em>STAY SAFE</em>
+                <i class="fa fa-rss"></i>
+                <i class="fa fa-signal"></i>
+                <i class="fa fa-battery-full"></i>
+                <i id="time"></i>
+                <div class="apps">
+                    <form action="">
+                        <label for=""><i class="fab fa-google"></i></label>
+                        <input type="search" name="search" id="search-box" placeholder="Search Google or type URL">
+                        <i class="fa fa-microphone"></i>
+                        </div>
+                    </form>
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-twitter-square"></i>
+                    <i class="fab fa-github"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="facebook">facebook</i><i class="twitter">twitter</i><i class="github">github</i><i class="instagram">instagram</i>
+                    <br><i class="fab fa-telegram"></i>
+                    <i class="fab fa-google-drive"></i>
+                    <i class="fab fa-google" id="google-app"></i>
+                    <i class="fa fa-video"></i>
+                    <i class="telegram">telegram</i><i class="drive">Google-drive</i><i class="google">google</i><i class="duo">Duo</i>
+                    <br><i class="fab fa-youtube"></i>
+                    <i class="fa fa-envelope"></i>
+                    <i class="fa fa-music"></i>
+                    <i class="fa fa-cog"></i>
+                    <i class="youtube">youtube</i><i class="gmail">gmail</i><i class="music">music</i><i class="setting">setting</i>
+                    <br><i class="fab fa-whatsapp-square"></i>
+                    <i class="fab fa-tiktok fa-border fa-2x"></i>
+                    <br><i class="whatsapp">whatsapp</i><i class="tiktok">tiktok</i>
+                    <br><i class="fa fa-phone-square"></i>
+                    <i class="fa fa-envelope-open"></i>
+                    <i class="fa fa-folder"></i>
+                    <i id="camera-app" class="fa fa-camera-retro"></i>
+                    <i class="phone">phone</i><i class="message">message</i><i class="files">files</i><i class="camera">camera</i>
+                </div>
+                
+                <div id="navigator">
+                    <i class="fa fa-bars"></i>
+                    <i class="fa fa-circle"></i>
+                    <i class="fa fa-arrow-left"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <script src="./script.js"></script> -->
+    <script>
+        window.onload= function() {
+    printTime();
+};
+function printTime(){
+    var d= new Date();
+    var hours = d.getHours();
+    var mins = d.getMinutes();
+    var secs = d.getSeconds();
+    var day = d.getDay();
+    var date = d.getDate();
+    var month = d.getMonth();
+    var year = d.getFullYear();
+    if (hours>12) {
+        hours = hours;
+    }
+    if (mins<12) {
+        mins = "0" + mins;
+    }
+    // if (secs<10) {
+    //     secs = "0" + secs;
+    // }
+    document.getElementById("time").innerHTML = `${hours}:${mins}`;
+    // document.getElementById('fff').innerHTML = day + '/' + date + '/' + month + '/' + year
+    setInterval(printTime,1000)
+}
+document.getElementById('navigator').style.display = 'none'
+document.getElementById('call-content').style.display = 'none'
+// document.getElementbyId('on').style.color = 'red'
+// const onPhone = document.querySelector('.fa-power-off');
+const offPhone = document.querySelector('.fa-power-off');
+const afterOn = document.querySelector('.when-on');
+const phoneScreen = document.querySelector('#screen');
+
+// onPhone.addEventListener('dbclick', phoneOn);
+offPhone.addEventListener('click', phoneOff);
+
+
+function phoneOn() {
+    afterOn.style.display = 'block';
+    phoneScreen.style.display = 'block';
+    phoneScreen.style.background = 'url(pigeon.jpg)'
+    document.getElementById('call-content').style.display = 'none';
+    document.getElementById('on').style.color = 'red'
+    document.getElementById('startbutton').style.color = 'black'
+}
+
+function phoneOff() {
+    afterOn.style.display = 'none'
+    phoneScreen.style.display = 'black';
+    phoneScreen.style.background = 'black'
+    phoneScreen.style.color = 'black'
+    document.getElementById('on').style.color = 'blue'
+    document.getElementById('startbutton').style.color = 'white'
+    toCall.style.display = 'none'
+     document.getElementById('navigator').style.display = 'none'
+     document.getElementById('navigator').style.position = 'absolute'
+    // var navigator = document.getElementById('navigator');
+    //                 getElementById('navigator').style = {...navigator.style, display: 'none', position: 'absolute', backgrou}
+
+
+    return removeNavigator()
+}
+
+function navigate() {
+    document.getElementById('navigator').style.display = 'block'
+}
+
+function removeNavigator() {
+    document.getElementById('navigator').style.display = 'none'
+}
+
+const forCall = document.querySelector('.fa-phone-square')
+const toCall = document.getElementById('call-content')
+
+forCall.addEventListener('click', callBoard)
+
+function callBoard() {
+    document.getElementById('call-content').style.display = 'block'
+    document.getElementById('navigator').style.position = 'relative'
+}
+
+const buttons = document.querySelectorAll('button')
+const values  = document.querySelector('div#numberBoard')
+const result  = document.querySelector('div.result')
+const symbol  = document.querySelectorAll('button.symbol')
+const times   = document.querySelector('#cancle')
+
+
+buttons.forEach((button)=>{
+    button.addEventListener('click', (e)=>{
+       numberBoard.innerHTML += e.target.id
+    })
+})
+
+
+const returnToPreviousButton = document.querySelector('.fa-arrow-left')
+const returnToHomeButton = document.querrySelector('.fa-circle')
+const returnToRecentButton = document.querySelector('.fa-bars')
+
+
+returnToPreviousButton.addEventListener('click', goToPrevious)
+returnToHomeButton.addEventListener('click', goToHome)
+returnToRecentButton.addEventListener('click', goToRecent)
+
+
+function goToHome() {
+    phoneOn()
+}
+    </script>
+</body>
+</html>
