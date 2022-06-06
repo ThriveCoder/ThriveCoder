@@ -4,95 +4,1111 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./mobile.css"> -->
     <link rel="stylesheet" href="./css/all.min.css">
     <link rel="stylesheet" href="./css/fontawesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
-      integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V"
-      crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>First web page</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    color: unset;
+    font-family: sans-serif;
+    /* background: white; */
+}
+html,body {
+    scroll-behavior: smooth;
+}
+header {
+    position: sticky;
+    top: 0;
+    bottom: 0;
+    background-color: #e2e8f0;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    max-width: 100%;
+    width: 100%;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+                -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+}
+header .brand .logo {
+    width: 100px;
+    height: 100px;
+    margin: -40px 0 0 50px;
+}
+#openMenu, #closeMenu {
+    display: none;
+    cursor: pointer;
+}
+header nav ul {
+    display: flex;
+    padding: 20px;
+}
+header nav ul li {
+    margin: 0 5px;
+    padding: 0 10px;
+}
+header nav ul li a:hover {
+    background-color: #3b82f6;
+    color: white;
+    padding: 10px;
+}
+main {
+    margin: 45px 0;
+}
+section.one {
+    background: rgb(231, 230, 230);
+    display: flex;
+    padding: 20px 50px;
+    justify-content: space-between;
+}
+section.one h1 {
+    font-size: 30px;
+}
+section.one p {
+    width: 800px;
+    line-height: 40px;
+}
+div button {
+    background: #3b82f6;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    padding: 10px 50px;
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+    /* box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+                -6px -6px 10px -1px rgba(255, 255, 255, 0.7); */
+}
+div button.contact {
+    background: none;
+    border: 2px solid #3b82f6;
+    margin-left: 30px;
+    color: #3b82f6;
+}
+div.image {
+    background-color: #3b82f6;
+    color: white;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+}
+section.project {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(231, 230, 230);
+    padding: 30px;
+}
+section.project h1 {
+    font-size: 30px;
+    font-weight: 800;
+}
+div.project1, div.project2, div.project3, div.project4 {
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: #3b82f6;
+    color: white; 
+    border-radius: 200px;
+    margin: 30px 30px;
+}
+div.project1:hover, div.project2:hover, div.project3:hover, div.project4:hover {
+    background: #93c5fd;
+    color: #000;
+    font-weight: 900;
+}
+section.service {
+    background: #3b82f6;
+    text-align: center;
+    margin: 20px 0;
+}
+section.service h1 {
+    font-size: 30px;
+    font-weight: 900;
+    padding: 20px 0;
+    color: white;
+}
+section.service .service-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.service-content .service1, .service2, .service3 {
+    width: 400px;
+    height: auto;
+    background: #e2e8f0;
+    padding: 15px;
+    border-radius: 2vh;
+    margin: 0 5px 20px 5px;
+}
+.service1 i.fa-code, i.fa-cogs, i.fa-gamepad {
+    font-size: 50px;
+    padding: 10px;
+    color: #3b82f6;
+}
+.service1 h3, .service2 h3, .service3 h3 {
+    font-size: 25px;
+    padding: 10px;
+    color: #3b82f6;
+}
+.service1 p, .service2 p, .service3 p {
+    line-height: 25px;
+}
+button.service-btn {
+    border: 2px solid ;
+    box-shadow: none;
+}
+.service2 button.service-btn {
+    border: none;
+    border: 2px solid #3b82f6;
+    color: #3b82f6;
+    box-shadow: none;
+    background: none;
+}
+section.testimonial {
+    color: #3b82f6;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+section.testimonial .container {
+    width: 800px;
+    overflow: hidden;
+    min-width: 350px;
+}
+.wrapper {
+    width: 400%;
+    display: flex;
+    justify-content: space-between;
+    transition: 1s;
+}
+.sliderow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section.testimonial h1 {
+    font-size: 30px;
+    text-align: center;
+    margin: 10px 0;
+}
+section.testimonial .slidecol {
+    background-color: #3b82f6;
+    color: white;
+    width: 70%;
+    padding: 20px;
+    border-radius: 2vh;
+    overflow: hidden;
+}
+section.testimonial .testimonail-image {
+    /* width: 100px; */
+    /* height: 100px; */
+    /* border-radius: 100px; */
+    /* background: black; */
+    float: right;
+}
+section.testimonial .testimonail-image img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+.review p {
+    line-height: 30px;
+    width: auto;
+}
+section.testimonial pre {
+    display: inline-flex;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+.review span.name {
+    font-size: 20px;
+    background-color: #000;
+    color: white;
+    padding: 10px;
+    margin-bottom: 50px;
+}
+.review div.work-place {
+    margin-top: 10px;
+    font-style: italic;
+}
+.indicator {
+    margin: 20px 0;
+}
+section.testimonial button {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    box-shadow: none;
+    padding: 0;
+    margin: 5px;
+    border: 2px solid #3b82f6;
+    background: none;
+    transition: 1s;
+}
+section.testimonial button.active {
+    width: 40px;
+    background: #3b82f6;
+}
+section.about {
+    background: #dbeafe;
+    padding: 0 100px;
+    border-bottom-right-radius: 200px;
+    color: black;
+}
+section.about h1 {
+    text-align: center;
+    font-size: 30px;
+    padding: 20px;
+}
+section.about .about-me {
+    display: flex;
+    justify-content: space-between
+}
+.about-me p {
+    line-height: 30px;
+    word-spacing: 20px;
+    width: auto;
+    margin-right: 200px;
+}
+.about-me div.my-image {
+    display: flex;
+    flex-direction: column;
+}
+div.my-image div.image {
+    /* background: black; */
+    /* color: white; */
+    margin: 0 100px 0 0;
+    /* border-radius: 50%; */
+}
+div.my-image div.image img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: none;
+}
+div.my-image button.cv {
+    background: none;
+    border: 2px solid white;
+    box-shadow: none;
+    margin: 10px 100px 0 0;
+    padding: 5px;
+}
+section.about .contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section.about .contact i {
+    font-size: 30px;
+    margin: 20px;
+    cursor: pointer;
+}
+section.contacts {
+    background: rgb(231, 230, 230);
+    margin: 20px 0;
+    padding: 30px 200px;
+}
+section.contacts h1 {
+    text-align: center;
+    padding: 20px;
+    font-size: 30px;
+    color: #3b82f6;
+}
+.contact-row {
+    display: flex;
+    justify-content: space-between;
+}
+section.contacts .mail {
+    display: flex;
+    flex-direction: column;
+    width: min-content;
+}
+section.contacts #email {
+    background: none;
+    border: 2px solid #3b82f6;
+    padding: 20px;
+    width: 300px;
+    outline: none;
+}
+section.contacts .message {
+    width: 400px;
+    height: 300px;
+    border: 2px solid #3b82f6;
+    margin: 20px 0;
+    padding: 20px;
+    line-height: 30px;
+    outline: none;
+    overflow-y: hidden;
+}
+div:empty::before {
+    color: grey;
+}
+div[data-placeholder]:not([data-placeholder=""]):empty::before {
+    content: attr(data-placeholder);
+}
+.send-social i {
+    margin: 0 6px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.fa-facebook {
+    color: blue;
+}
+.fa-twitter {
+    color: dodgerblue;
+}
+.fa-instagram {
+    color: deeppink;
+}
+.fa-github {
+    color: orangered;
+}
+button.send-btn {
+    margin-left: 80px;
+    cursor: pointer;
+}
+.location {
+    display: flex;
+    flex-direction: column;
+}
+.map {
+    width: 400px;
+    height: 380px;
+    background: #93c5fd;
+}
+.smart-contact {
+    margin: 35px 0;
+}
+.fa-whatsapp {
+    color: green;
+    font-size: 20px;
+}
+.fa-envelope {
+    color: red;
+    font-size: 20px;
+    margin-left: 50px;
+}
+footer {
+    background: #000;
+    display: flex;
+    flex-direction: column;
+    padding: 0 100px;
+}
+footer img {
+    background: #767777;
+    width: 100px;
+    height: 100px;
+    margin: 30px 45%;
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+}
+.slogan {
+    display: flex;
+    flex-direction: column;
+}
+.slogan h2 {
+    color: #abb3b3;
+}
+.slogan em {
+    color: #abb3b3;
+}
+.worker h3 {
+    color: #abb3b3;
+}
+#email {
+    width: 300px;
+    padding: 20px;
+    background: #abb3b3;
+    outline: none;
+    border: none;
+}
+label {
+    padding-bottom: 10px
+}
+u {
+    border: 2px solid #3b82f6;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+.footer-about, .footer-contact {
+    color: gray;
+    width: 80px;
+}
+.footer-social-media {
+    margin: 0 43%;
+}
+.footer-social-media i {
+    margin: 20px 10px;
+}
+.copyright {
+    color: #e2e8f0;
+    text-align: center;
+    margin: 10px 0;
+}
+/* div:empty::before {
+    content: 'fallback placeholder';
+} */
+@media (max-width: 800px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        list-style: none;
+        color: unset;
+        font-family: sans-serif;
+        /* background: white; */
+    }
+    html,body {
+        scroll-behavior: smooth;
+    }
+    header {
+        position: sticky;
+        top: 0;
+        bottom: 0;
+        background-color: #e2e8f0;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 20px;
+        max-width: 100%;
+        width: 100%;
+        min-width: 100%;
+        box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+                    -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+    }
+    footer {
+        display: none;
+    }
+    header .brand .logo {
+        width: 50px;
+        height: 50px;
+        margin: -10px 0 0 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    header .brand .logo img {
+        width: 100px;
+        height: 100px;
+    }
+    #openMenu {
+        display: block;
+        margin: 10px;
+    }
+    #closeMenu {
+        display: none;
+    }
+    .fa-align-right, .fa-times {
+        font-size: 25px;
+    }
+    header nav .mainMenu {
+        height: auto;
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 10;
+        background: #e2e8f0;
+        transition: left 1s ease;
+    }
+    header nav ul {
+        display: flex;
+        flex-direction:column;
+        padding: 20px;
+    }
+    header nav ul li {
+        margin: 0 5px;
+        padding: 20px 10px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+    section.one {
+        background: rgb(231, 230, 230);
+    }
+    section.one h1 {
+        /* font-size: 30px; */
+    }
+    section.one p {
+        width: auto;
+        line-height: 30px;
+    }
+    div button {
+        background: #3b82f6;
+        border: none;
+        outline: none;
+        border-radius: 50px;
+        padding: 5px 30px;
+        color: white;
+        font-size: 13px;
+        font-weight: 500;
+        /* box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+                    -6px -6px 10px -1px rgba(255, 255, 255, 0.7); */
+    }
+    div button.contact {
+        background: none;
+        border: 2px solid #3b82f6;
+        margin-left: 30px;
+        color: #3b82f6;
+    }
+    div.image {
+        display: none;
+    }
+    section.project {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: rgb(231, 230, 230);
+        padding: 20px;
+        margin: 20px 0;
+    }
+    section.project h1 {
+        /* font-size: 30px; */
+        font-weight: 600;
+        padding: 15px;
+    }
+    div.project1, div.project2, div.project3, div.project4 {
+        width: 150px;
+        height: 150px;
+        text-align: center;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        background: #3b82f6;
+        color: white; 
+        border-radius: 200px;
+        margin: 20px 50px;
+    }
+    section.service h1 {
+        /* font-size: 30px; */
+        font-weight: 600;
+        padding: 20px 0;
+        color: white;
+    }
+    section.service .service-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .service-content .service1, .service2, .service3 {
+        width: 300px;
+        height: auto;
+        background: #e2e8f0;
+        padding: 10px;
+        border-radius: 2vh;
+        margin: 0 5px 20px 5px;
+    }
+    .service1 i.fa-code, i.fa-cogs, i.fa-gamepad {
+        font-size: 40px;
+        padding: 10px;
+        color: #3b82f6;
+    }
+    .service1 h3, .service2 h3, .service3 h3 {
+        /* font-size: 25px; */
+        padding: 10px;
+        color: #3b82f6;
+    }
+    .service2 button.service-btn, button.service-btn {
+        margin: 10px 0;
+    }
+    section.testimonial .container {
+        width: 58%;
+        margin:  0 30px;
+    }
+    .wrapper {
+        width: 400%;
+        display: flex;
+        justify-content: space-between;
+        transition: 1s;
+    }
+    .sliderow {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    section.testimonial h1 {
+        font-size: 30px;
+        text-align: center;
+        margin: 10px 0;
+    }
+    section.testimonial .slidecol {
+        /* background-color: #3b82f6;
+        color: white;
+        width: 70%;
+        padding: 20px;
+        border-radius: 2vh; */
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+
+    }
+    section.testimonial .testimonail-image {
+        /* width: 100px; */
+        /* height: 100px; */
+        /* border-radius: 100px; */
+        /* background: black; */
+        /* float: right; */
+    }
+    section.testimonial .testimonail-image img {
+        width: 100%;
+        height: 50%;
+        border: none;
+        border-radius: 0;
+    }
+    .review p {
+        /* line-height: 30px; */
+        width: auto;
+    }
+    section.testimonial pre {
+        display: inline-flex;
+        font-size: 25px;
+        margin-bottom: 10px;
+    }
+    .review span.name {
+        font-size: 20px;
+        background-color: #000;
+        color: white;
+        padding: 10px;
+        margin-bottom: 50px;
+    }
+    .review div.work-place {
+        margin-top: 10px;
+        font-style: italic;
+    }
+    section.about {
+        padding: 0 50px;
+    }
+    section.about h1 {
+        /* text-align: center;
+        font-size: 30px;
+        padding: 20px; */
+    }
+    section.about .about-me {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .about-me p {
+        line-height: 30px;
+        word-spacing: 20px;
+        width: 100%;
+    }
+    .about-me div.my-image {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 0 0 100px;
+    }
+    div.my-image div.image {
+        background: none;
+        display: flex;
+    }
+    div.my-image div#image img {
+        border: none;
+        border-radius: 0;
+        width: 100%;
+        height: 100%;
+    }
+    div.my-image button.cv {
+        background: none;
+        border: 2px solid #3b82f6;
+        color: #3b82f6;
+        box-shadow: none;
+        margin: -20px 100px 0 0;
+        padding: 10px 25px;
+    }
+    section.about .contact {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 100px;
+    }
+    section.contacts {
+        margin: 20px 0;
+        padding: 30px 40px;
+    }
+    .contact-row {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    section.contacts .mail {
+        display: flex;
+        flex-direction: column;
+        width: min-content;
+    }
+    section.contacts #email {
+        padding: 10px 20px;
+    }
+    section.contacts .message {
+        width: 300px;
+        height: 200px;
+        margin: 20px 0;
+        line-height: 20px;
+    }
+    button.send-btn {
+        margin-left: 130px;
+        cursor: pointer;
+    }
+    .location {
+        margin-top: 20px;
+    }
+    .map {
+        width: 300px;
+        height: 200px;
+    }
+    .smart-contact {
+        margin: 20px 0;
+    }
+    .fa-envelope {
+        color: red;
+        font-size: 20px;
+        margin-left: 40px;
+    }
+}
+    </style>
 </head>
 <body>
     <header>
+        <div class="brand">
+            <div class="logo"><img src="./ThriveTech Images/thriveTechLogo.png" alt=""></div>
+        </div>
         <nav>
-            <div class="brand">Thrive Coder</div>
-            <div class="searching">
-                <i class="fa fa-search"></i>
-                <input type="search" name="" id="search" placeholder="Search here">
+            <div id="openMenu" class="active">
+                <i class="fa fa-align-right"></i>
             </div>
-            <div class="open-menu">
-                <i class="fa fa-bars"></i>
-            </div>
-            <div class="close-menu">
+            <div id="closeMenu">
                 <i class="fa fa-times"></i>
             </div>
-            <div class="main-menu">
+            <div class="mainMenu">
                 <ul>
-                    <li><a href="#">HOME</a></li>
-                    <li><a href="#">ARTICLES</a></li>
-                    <li><a href="#">BOOKS</a></li>
-                    <li><a href="#">ABOUT</a></li>
-                    <li><a href="#">CONTACT</a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#project">Projects</a></li>
+                    <li><a href="#service">Services</a></li>
+                    <li><a href="#testimonial">Testimonials</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contacts</a></li>
                 </ul>
             </div>
         </nav>
     </header>
-
     <main>
-        <section class="section1">
-            <div class="ad-image">
-                <span class="span1">MARO</span>
-                <img src="./images/ei_1652476343563-removebg-preview.png" class="image1" alt="first-image">
-                <span class="span2">DIXIT </span>
+        <section class="one">
+            <article>
+                <h1>Lorem, ipsum dolor.</h1>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum adipisci atque earum eos temporibus? 
+                    Tempore explicabo necessitatibus a voluptate quisquam quia illum porro quam similique qui quibusdam dolores sed error, 
+                    numquam ea. Maiores recusandae incidunt possimus facere, laborum numquam vel distinctio hic aliquid iure, minus veniam 
+                    vero dolore architecto veritatis.
+                    <div class="buttons">
+                        <button>Projects</button>
+                        <button class="contact">Contact</button>
+                    </div>
+                </p>
+            </article>
+            <div class="image">This is an image</div>
+        </section>
+        <section class="project" id="project">
+            <h1>Projects</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Modi consequuntur distinctio nemo tempore qui sequi amet ipsa quam quia repudiandae!
+            </p>
+            <div class="project-details">
+                <div class="project1">project1</div>
+                <div class="project2">project2</div>
+                <div class="project3">project3</div>
+                <div class="project4">project4</div>
             </div>
         </section>
-        <section class="section2">
-            <div class="lit-post-container">
-                <center><i>Your shopping</i></center>
-                <h2>NEW LITERATURE POSTS</h2>
-                <div class="section2-images">
-                    <div class="row1">
-                        <div class="row1-content1">
-                            <img src="./images/poet.jpg" class="image2" alt="">
-                            <span class="details1">
-                                <i class="date">On 26, Aug 2006</i>
-                                <span class="title">GET READY FOR HOLIDAY ON CHRISTMAS <br> WEEK</span>
-                                <hr class="hr1">
-                                <div class="tag">
-                                    <small>POEM</small>
-                                    <hr class="hr2">
-                                    <small>COMMENT</small>
-                                    <i class="fa fa-external-link-alt"></i>
-                                </div>
-                            </span>
-                        </div>
-                        <div class="row1-content2">
-                            <img src="./images/poet.jpg" class="image2" alt="">
-                            <span class="details1">
-                                <i class="date">On 26, Aug 2006</i>
-                                <span class="title">GET READY FOR HOLIDAY ON CHRISTMAS WEEK</span>
-                                <hr class="hr1">
-                                <div class="tag">
-                                    <small>POEM</small>
-                                    <hr class="hr2">
-                                    <small>COMMENT</small>
-                                    <i class="fa fa-external-link-alt"></i>
-                                </div>
-                            </span>
-                        </div>
+        <section class="service" id="service">
+            <h1>Services</h1>
+            <div class="service-content">
+                <div class="service1">
+                    <div class="web-logo">
+                        <i class="fa fa-code"></i>
                     </div>
-                    
+                    <h3>Web Development</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Repellat quo inventore illum obcaecati quos fuga, explicabo, ipsa voluptates, 
+                        aperiam aspernatur error odit a porro minima!
+                    </p>
+                    <button class="service-btn">Web development Projects</button>
+                </div>
+                <div class="service2">
+                    <div class="web-logo">
+                        <i class="fa fa-cogs"></i>
+                    </div>
+                    <h3>Application Development</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Repellat quo inventore illum obcaecati quos fuga, explicabo, ipsa voluptates, 
+                        aperiam aspernatur error odit a porro minima!
+                    </p>
+                    <button class="service-btn">App development Projects</button>
+                </div>
+                <div class="service3">
+                    <div class="web-logo">
+                        <i class="fa fa-gamepad"></i>
+                    </div>
+                    <h3>Game Development</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Repellat quo inventore illum obcaecati quos fuga, explicabo, ipsa voluptates, 
+                        aperiam aspernatur error odit a porro minima!
+                    </p>
+                    <button class="service-btn">Game development Projects</button>
                 </div>
             </div>
         </section>
+        <section class="testimonial" id="testimonial">
+            <h1>Testimonial</h1>
+            <div class="container">
+                <div class="wrapper">
+                    <div class="sliderow">
+                        <div class="slidecol">
+                            <div class="testimonail-image">
+                                <img src="./ThriveTech Images/markZuckerberg.jpg" alt="">
+                            </div>
+                            <div class="review">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                    Nostrum at id magni explicabo quia neque accusamus. Temporibus doloremque error, 
+                                    vitae animi ullam laudantium totam fugit voluptates recusandae sapiente quos distinctio 
+                                    ducimus porro labore iure, obcaecati ab, tempora dignissimos! Quam eaque aperiam in? 
+                                    Voluptatibus quia eligendi aspernatur quisquam repudiandae.
+                                    <pre>&starf;</pre>
+                                    <pre>&starf;</pre>
+                                    <pre>&starf;</pre>
+                                    <pre>&starf;</pre>
+                                    <pre>&star;</pre>
+                                    <br><span class="name">Mark Zukerberg</span>
+                                    <div class="work-place">C.E.O Meta</div>
+                                </p>
 
+                            </div>
+                        </div>
+                        <div class="slidecol">
+                            <div class="testimonail-image">
+                                <img src="./ThriveTech Images/elonMusk.jpg" alt="">
+                            </div>
+                            <div class="review">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                    Nostrum at id magni explicabo quia neque accusamus. Temporibus doloremque error, 
+                                    vitae animi ullam laudantium totam fugit voluptates recusandae sapiente quos distinctio 
+                                    ducimus porro labore iure, obcaecati ab, tempora dignissimos! Quam eaque aperiam in? 
+                                    Voluptatibus quia eligendi aspernatur quisquam repudiandae.
+                                    <pre>&starf;</pre>
+                                    <pre>&starf;</pre>
+                                    <pre>&starf;</pre>
+                                    <pre>&starf;</pre>
+                                    <pre>&starf;</pre>
+                                    <br><span class="name">Elon Musk</span>
+                                    <div class="work-place">C.E.O Tesla and Dodge</div>
+                                </p>
+
+                            </div>
+                        </div>
+                        <div class="slidecol">
+                            <div class="testimonail-image">
+                                <img src="./ThriveTech Images/larryPage.jpg" alt="">
+                            </div>
+                            <div class="review">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                    Nostrum at id magni explicabo quia neque accusamus. Temporibus doloremque error, 
+                                    vitae animi ullam laudantium totam fugit voluptates recusandae sapiente quos distinctio 
+                                    ducimus porro labore iure, obcaecati ab, tempora dignissimos! Quam eaque aperiam in? 
+                                    Voluptatibus quia eligendi aspernatur quisquam repudiandae.
+                                    <pre>&starf;</pre>
+                                    <pre>&starf;</pre>
+                                    <pre>&starf;</pre>
+                                    <pre>&starf;</pre>
+                                    <pre>&star;</pre>
+                                    <br><span class="name">Larry Page</span>
+                                    <div class="work-place">C.E.O Google</div>
+                                </p>
+
+                            </div>
+                        </div>
+                        <div class="slidecol">
+                            <div class="testimonail-image">
+                                <img src="./ThriveTech Images/zhangYiming.jpg" alt="">
+                            </div>
+                            <div class="review">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                    Nostrum at id magni explicabo quia neque accusamus. Temporibus doloremque error, 
+                                    vitae animi ullam laudantium totam fugit voluptates recusandae sapiente quos distinctio 
+                                    ducimus porro labore iure, obcaecati ab, tempora dignissimos! Quam eaque aperiam in? 
+                                    Voluptatibus quia eligendi aspernatur quisquam repudiandae.
+                                    <pre>&starf;</pre>
+                                    <pre>&starf;</pre>
+                                    <pre>&starf;</pre>
+                                    <pre>&starf;</pre>
+                                    <pre>&starf;</pre>
+                                    <br><span class="name">Zhang Yiming</span>
+                                    <div class="work-place">C.E.O ByteDance & TikTok</div>
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="indicator">
+                <button class="active"></button>
+                <button></button>
+                <button></button>
+                <button></button>
+            </div>
+        </section>
+        <section class="about" id="about">
+            <h1>About</h1>
+            <div class="about-me">
+                <p>
+                    <strong>Adewole Ridwanullahi Adebayo</strong>, officialy known as <strong>Thrive Coder</strong>. Perspiciatis, 
+                    natus commodi eum aut assumenda consectetur harum. Nulla at repellat cum ipsam expedita provident rem repellendus 
+                    voluptatibus vitae quibusdam. Sint maiores ipsum repudiandae deleniti quisquam vero dolores quae necessitatibus 
+                    tempore illum sed reprehenderit ipsa perspiciatis nobis eum molestias, laboriosam accusamus rerum aperiam magni 
+                    quibusdam maxime. Magnam dicta nulla quidem eum corrupti.
+                </p>
+                <div class="my-image">
+                    <div class="image" id="about-image">
+                        <img src="./ThriveTech Images//thriveTechLogo.png" alt="">
+                    </div>
+                    <button class="cv">See my CV here</button>
+                </div>
+            </div>
+            <div class="contact">
+                <i class="fab fa-facebook-square"></i>
+                <i class="fab fa-twitter-square"></i>
+                <i class="fab fa-whatsapp-square"></i>
+                <i class="fab fa-instagram-square"></i>
+            </div>
+        </section>
+        <section class="contacts" id="contact">
+            <h1>Contacts</h1>
+            <div class="contact-row">
+                <div class="mail">
+                    <input type="email" name="" id="email" placeholder="Your Email" onmousedown="return true">
+                    <div class="message" contenteditable="true" data-placeholder="Your message here"></div>
+                    <div class="send-social">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-github"></i>
+                        <button class="send-btn">Sent <i class="fa fa-paper-plane"></i></button>
+                    </div>
+                </div>
+                <div class="location">
+                    <div class="map"></div>
+                    <div class="smart-contact">
+                        <span><i class="fab fa-whatsapp"></i> 0704 734 4365</span>
+                        <span><i class="fa fa-envelope"></i> thrivetech793@gmail.com</span>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
     </main>
-        
     <footer>
-
+        <img src="./ThriveTech Images/thriveTechLogo.png" alt="">
+        <div class="footer-content">
+            <div class="slogan">
+                <H2>ThriveTech</H2>
+                <em>We make if right, fast & work</em>
+            </div>
+            <div class="worker">
+                <h3>Become a wworker.</h3>
+                <input type="email" name="" id="email" placeholder="Your email here">
+                <button class="worker-send-button">Send</button>
+            </div>
+            <div class="footer-about">
+                <label for=""><u>About</u></label>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius error vitae repellat nemo unde eveniet.
+            </div>
+            <div class="footer-contact">
+                <label for=""><u>Contact</u></label>
+                Old Adewole Embalm, Saabo, Ogbomoso, Oyo State, Nigeria
+            </div>
+        </div>
+        <div class="footer-social-media">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-github"></i>
+        </div>
+        <div class="copyright">
+            <i class="fa fa-copyright"></i> 2022 All right reserve
+        </div>
     </footer>
+    <!-- <script src="./hello.js"></script> -->
+    <script>
+        const wrapper = document.querySelector('.wrapper');
+const indicators = [...document.querySelectorAll('.indicator button')];
+
+let currentTestimonial = 0;
+indicators.forEach((item, i) => {
+    item.addEventListener('click', () => {
+        indicators[currentTestimonial].classList.remove('active');
+        wrapper.style.marginLeft = `${-100 * i}%`;
+        item.classList.add('active');
+        currentTestimonial = i;
+    })
+})
+
+const openMenu = document.querySelector(".fa-align-right");
+const closeMenu = document.querySelector(".fa-times");
+const mainMenu = document.querySelector(".mainMenu");
+
+openMenu.addEventListener('click', openNav) 
+closeMenu.addEventListener('click', closeNav)
+function openNav() {
+    mainMenu.style.display = 'flex'
+    mainMenu.style.left = '0'
+    mainMenu.style.top = '80px'
+    document.getElementById('closeMenu').style.display = 'block'
+    openMenu.style.display = 'none'
+}
+function closeNav() {
+    mainMenu.style.left = "120%"
+    document.getElementById('closeMenu').style.display = 'none'
+    openMenu.style.display = 'block'
+}
+    </script>
 </body>
 </html>
